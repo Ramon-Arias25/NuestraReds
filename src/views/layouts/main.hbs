@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aVenTa</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+        integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        {{> navbar }}
+    </header>
+    {{#if sidebar.stats}}
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-md-3">
+                {{> user-sidebar }}
+            </div>
+            <div class="col-md-6">
+                {{{ body }}}
+            </div>
+            <div class="col-md-3">
+                {{> stats }}
+                {{> popular }}
+                {{> comments }}
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="col-md-12">
+        {{{ body }}}
+    </div>
+    {{/if}}
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- CUSTOM CODE -->
+    <script src="/public/js/scripts.js"></script>
+</body>
+
+</html>

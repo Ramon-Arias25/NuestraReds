@@ -1,0 +1,113 @@
+<div class="sign-in-page">
+    <div class="signin-popup">
+        <div class="signin-pop">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cmp-info">
+                        <div class="cm-logo">
+                            <img src="./public/images/Speech.webp" alt="">
+                            <p>La herramienta que nos organiza</p>
+                        </div>
+                        <div class="cm-img">
+                            <img src="./public/images/cm-main-img.webp" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="login-sec">
+                        <ul class="sign-control">
+                            <li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>
+                            <li data-tab="tab-2"><a href="#" title="">Sign up</a></li>
+                            {{#if singupMessage }}
+                            <div class="container p-4">
+                                {{ singupMessage }}
+                            </div>
+                            {{/if}}
+                        </ul>
+                        <div class="sign_in_sec current" id="tab-1">
+                            <h3>Sign in</h3>
+                            <form action="/signin" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-12 no-pdd">
+                                        <div class="form-group">
+                                            <!-- USERNAME INPUT -->
+                                            <label for="username">Username</label>
+                                            <input type="email" name="email" placeholder="Insert Email"
+                                                class="form-control">
+                                        </div>
+                                        <i class="far fa-user"></i>
+                                    </div>
+                                    <div class="col-lg-12 no-pdd">
+                                        <div class="form-group">
+                                            <!-- PASSWORD INPUT -->
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" placeholder=" Insert Password"
+                                                class="form-control">
+                                        </div>
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <div class="col-lg-12 no-pdd">
+                                    </div>
+                                    <div class="col-lg-12 no-pdd">
+                                        <button type="submit" class="btn btn-dark btn-block">
+                                            Sign IN
+                                        </button>
+                                        <!--<a href="#" class="aloging">Lost your Password?</a>
+                                        <br>
+                                        <a href="/signup" class="aloging">Don't have an account?</a>-->
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="login-resources">
+                                <h4>Login Via Social Account</h4>
+                                <ul>
+                                    <li><a href="#" title="" class="fb block"><i class="fab fa-facebook-f"></i>Login Via
+                                            Facebook</a></li>
+                                    <li><a href="#" title="" class="tw"><i class="fab fa-twitter"></i>Login Via
+                                            Twitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sign_in_sec" id="tab-2">
+                            <div class="dff-tab current" id="tab-3">
+                                <h3>Sing up</h3>
+                                <form action="/signup" method="POST">
+                                    <div class="row">
+                                        <div class="col-lg-12 no-pdd">
+                                            <div class="form-group text-left">
+
+                                                <!-- USERNAME INPUT -->
+                                                <label for="username">Username</label>
+                                                <input type="email" name="email" placeholder="Insert Email"
+                                                    class="form-control">
+                                            </div>
+                                            <i class="far fa-user"></i>
+                                        </div>
+                                        <div class="col-lg-12 no-pdd">
+                                            <div class="form-group">
+                                                <!-- PASSWORD INPUT -->
+                                                <label for="password">Password</label>
+                                                <input type="password" name="password" placeholder=" Insert Password"
+                                                    class="form-control">
+                                            </div>
+                                            <i class="fas fa-key"></i>
+                                        </div>
+                                        <div class="col-lg-12 no-pdd">
+                                        </div>
+                                        <div class="col-lg-12 no-pdd">
+                                            <button type="submit" class="btn btn-dark btn-block">
+                                                SingUp
+                                            </button>
+                                            <!--<a href="/signin" class="aloging"> Do you have an account?</a>-->
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

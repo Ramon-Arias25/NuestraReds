@@ -1,0 +1,37 @@
+
+{{#if user}}
+
+<div class="card mb-2">
+    <div class="username-dt bg-dark">
+        <div class="usr-pic">
+            <img src="http://via.placeholder.com/100x100" alt="">
+        </div>
+    </div>
+    <div class="cad-body">
+        <div class="col">
+            <div class="user-specs ">
+                <h4><b> eMail:  </b>
+                    <br>
+                    {{ user.email }}
+                </h4>
+                <span> <b>password: </b> {{ user.password }}</span>
+                <br>
+                <span><b>_id: </b>  {{ user._id }}</span>
+            </div>
+            <div class="user-fw-status">
+                <p>
+                    <h6>Following</h6>
+                    <span>9999</span>
+                </p>
+                <p>
+                    <h6>Followers</h6>
+                    <span>{{ user.follows }}</span>
+                </p>
+                <p>
+                    <a href="#" title="">View Profile</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
